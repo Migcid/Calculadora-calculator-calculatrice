@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@700&family=Martian+Mono:wght@100&display=swap");
+/* otr tipo de letra para elegir */
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cairo+Play:wght@700&family=Martian+Mono:wght@100&display=swap");
+
+/* font-family: 'Bungee Spice', cursive;
+font-family: 'Cairo Play', sans-serif;
+font-family: 'Martian Mono', monospace; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 70%vw; /* aca lo cambie a 70% del vw para poder verlo desde chrome mobile, sin embargo se puede dejar en 2rem y luego configurar en @media query para que no se desplace para cerlo desde el smartphone */
+}
+
+body {
+	/* agregamos un alto de 100 o de 80 para que siempre se muestre todo dentro del viewport*/
+	min-height: 100vh;
+	background-color: yellow;
+	/* Centrar con display grid*/
+	display: grid;
+	place-items: center;
+	margin: 20px 0 20px 0;
+}
+.calculadora {
+	background-color: #574bee;
+	color: white;
+	/* 
+	- Con gap le damos una separacion a cada boton entre si
+	- usamos grid template columns para ordenar las columnas que queremos 
+	*/
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.2rem;
+	/* hacemos que trabaje en un ancho total del 60% en mobile y 350px en desktop (el mobile first revisar en el media query*/
+	width: 350px;
+	padding: 0.8rem;
+	border-radius: 1rem;
+}
+
+.pantalla {
+	/* usamos grid column para hacer que la pantalla de la calculadora ocupe el 100% del ancho */
+	grid-column: 1 / 5;
+	background-color: #322a8c;
+	border-radius: 0.8rem;
+	padding: 1rem;
+	font-size: 3rem;
+	text-align: right;
+	margin-bottom: 1rem;
+	font-family: monospace;
+	color: black;
+}
